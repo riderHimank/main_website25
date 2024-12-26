@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.alcher-app{
+    background-color: #000014;
+    background-image: url(_components/texture1.png);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    color: aliceblue;
+
+}
+.phone{
+    height: fit-content;
+}
+.feelinglost{
+    position: fixed;
+    z-index: 1;
+    top: 30%;
+    left: 28%;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.phone{
+    position: absolute;
+    z-index: 9;
+    top:28%;
+    left: 39.5%;
+}
+.text{
+    position: absolute; 
+    z-index: 4;   
+    top:47%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.get-app-btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
