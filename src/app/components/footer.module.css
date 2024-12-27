@@ -1,0 +1,123 @@
+.mainFooter {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(254, 57, 137, 1);
+  flex-direction: column;
+}
+.eventsSec {
+  border-left: 1px solid rgba(255, 235, 211, 1);
+  border-right: 2px solid rgba(255, 235, 211, 1);
+  border-top: 2px solid rgba(255, 235, 211, 1);
+  border-bottom: 1px solid rgba(255, 235, 211, 1);
+  display: flex;
+  gap: 6px;
+  height: 50px;
+  background-color: rgba(17, 59, 127, 1);
+}
+
+.eventsSec ul {
+  cursor: pointer;
+  padding: 10px;
+  border-left: 1px solid rgba(255, 235, 211, 1);
+  border-right: 2px solid rgba(255, 235, 211, 1);
+  border-top: 2px solid rgba(255, 235, 211, 1);
+  border-bottom: 1px solid rgba(255, 235, 211, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logoDiv {
+  width: 50%;
+  height: auto;
+}
+.prbheads {
+  font-family: gameTape;
+  color: rgba(255, 235, 211, 1);
+  height: auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.prbname1 {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.prbname2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: auto;
+}
+
+#name {
+  font-family: stoneSlab;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 41.91px;
+}
+
+.design {
+  height: auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.designleft {
+  width: 30%;
+}
+.designright {
+  width: 30%;
+}
+
+.oneline {
+  color: rgba(255, 235, 211, 1);
+  font-family: gameTape;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.lftline {
+  width: 30%;
+}
+.followSec {
+  width: 40%;
+}
+.rgtline {
+  text-align: right;
+  width: 30%;
+}
+
+.followUs {
+  color: rgba(255, 235, 211, 1);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.followtxt {
+  font-family: stoneSlab;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25.15px;
+}
+.followicons {
+  display: flex;
+  gap: 20px;
+}
+
+.followicons ul {
+  width: 30px;
+  height: 30px;
+}

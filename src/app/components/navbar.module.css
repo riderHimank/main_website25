@@ -1,0 +1,12 @@
+.getcards {
+  width: 159px;
+  height: 46px;
+  cursor: pointer;
+}
+.modules {
+  font-family: stoneSlab;
+  color: rgba(255, 235, 211, 1);
+  letter-spacing: 1.2px;
+  display: flex;
+  gap: 10px,
+}
