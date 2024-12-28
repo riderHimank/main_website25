@@ -105,6 +105,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 5rem;
 }
 .followtxt {
   font-family: stoneSlab;
@@ -120,4 +121,52 @@
 .followicons ul {
   width: 30px;
   height: 30px;
+}
+
+.retroleft {
+  width: 26px;
+  height: 800px;
+  position: absolute;
+  left: 150px;
+}
+
+.retroleft img {
+  width: 100%;
+  height: 100%;
+}
+
+.retroright {
+  width: 26px;
+  height: 800px;
+  position: absolute;
+  right: 150px;
+}
+
+.retroright img {
+  width: 100%;
+  height: 100%;
+}
+
+.globecir {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  left: 30px;
+}
+
+.globecir img {
+  width: 100%;
+  height: 100%;
+}
+
+.globecir2 {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  right: 0px;
+}
+
+.globecir2 img {
+  width: 100%;
+  height: 100%;
 }

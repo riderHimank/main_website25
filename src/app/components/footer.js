@@ -71,6 +71,20 @@ const footer = () => {
             </ul>
           </div>
         </div>
+        <div className={styles.retroleft}>
+          <img src="/txtretroleft.png" alt="" />
+        </div>
+        <div className={styles.retroright}>
+          <img src="/txtretroright.png" alt="" />
+        </div>
+
+        <div className={styles.globecir}>
+          <img src="/globe.png" alt="" />
+        </div>
+
+        <div className={styles.globecir2}>
+          <img src="/globe.png" alt="" />
+        </div>
       </div>
     </div>
   );
