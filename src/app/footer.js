@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
-import "./stone-slab.css";
-import "./game-tape.css";
+import "./components/stone-slab.css";
+import "./components/game-tape.css";
 const footer = () => {
   return (
     <div>
