@@ -7,7 +7,7 @@ const Navbar = () => {
       <img className={styles.logo} src="/alcherlogo1.png" alt="" />
       <div className={styles.options}>
         <ul>
-          <li>Home</li>
+          <li className="active">Home</li>
           <li>Events</li>
           <li>Competitions</li>
           <li>MUN</li>
@@ -20,6 +20,7 @@ const Navbar = () => {
       </div>
       <div className={styles.getcards}>
         <img src="/bgGetcards1.jpg" alt="" />
+        <img className={styles.desc} src="/3_arrows.png" alt="" />
       </div>
     </div>
   );
