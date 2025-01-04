@@ -4,7 +4,6 @@ import AlcherApp from "./_alcher-app-section/AlcherApp";
 import EventSec from "./events-section/EventSec";
 import SponsorSection from "./sponsor-section/SponsorSec";
 
-
 export default function Page() {
   return (
     <div>
