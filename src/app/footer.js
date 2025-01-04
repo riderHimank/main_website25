@@ -58,16 +58,24 @@ const footer = () => {
           <p className={styles.followtxt}>Follow Us</p>
           <div className={styles.followicons}>
             <ul>
-              <img src="/instaicon.png" alt="" />
+              <a href="https://www.instagram.com/alcheringaiitg/?hl=en">
+                <img src="/instaicon.png" alt="" />
+              </a>
             </ul>
             <ul>
-              <img src="/fbicon.png" alt="" />
+              <a href="https://www.facebook.com/alcheringaiitg/">
+                <img src="/fbicon.png" alt="" />
+              </a>
             </ul>
             <ul>
-              <img src="/xicon.png" alt="" />
+              <a href="https://x.com/alcheringaiitg">
+                <img src="/xicon.png" alt="" />
+              </a>
             </ul>
             <ul>
-              <img src="/yticon.png" alt="" />
+              <a href="https://www.youtube.com/@alcheringaIITG">
+                <img src="/yticon.png" alt="" />
+              </a>
             </ul>
           </div>
         </div>
@@ -83,7 +91,7 @@ const footer = () => {
         </div>
 
         <div className={styles.globecir2}>
-          <img src="/globe.png" alt="" />
+          <img src="/globe2.png" alt="" />
         </div>
       </div>
     </div>
