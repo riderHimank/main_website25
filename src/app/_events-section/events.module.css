@@ -1,0 +1,1668 @@
+@font-face {
+  font-family: 'Brick_Pixel';
+  src: url('./_components/Brick_Pixel.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Game_Type';
+  src: url('./_components/Game_Tape.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stone_Slab';
+  src: url('./_components/Stone_Slab.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+  .events {
+    width:100%;
+   /* width:100vw; */
+   padding-bottom: 20px;
+    text-align: center;
+    background-color: rgb(0 0 20);
+  }
+  .heading{
+    display:flex;
+    flex-direction: row;
+
+  }
+.headersection{
+  width:60%;
+}
+  .headersection .intro h1{
+    font-size: 3rem;
+    margin:0;
+   font-weight:400;
+    font-family: 'Stone_Slab', sans-serif;
+    color:#FFEBD3;
+    text-align: left;
+  }
+  .resp{
+    display:none;
+  }
+  .headersection .intro h1 span {
+    
+  }
+  
+  .headersection .highlight {
+    
+  }
+  .evcard{
+    display:flex;
+    flex-direction: row;
+    width:50%;
+    column-gap: 30px;
+  }
+  
+  .randomtextcontainer {
+    position: relative;
+   width:30%;
+    
+   
+    
+  }
+  .intro{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap:5px;
+  }
+  .randomtext {
+    position: absolute;
+   font-size: 0.8rem;
+   color:#FFEBD3;
+   
+  
+  }
+  .lines{
+    min-width:100%;
+  }
+  
+  .rndtext1{
+    transform: translate(700px, -220px);
+  }
+  .rndtext2{
+    transform: translate(1000px, -150px);
+  }
+  .rndtext3{
+    transform: translate(900px, -60px);
+  }
+  .lines{
+    width:100%;
+
+  }
+
+  .cardssection {
+    display: flex;
+    flex-direction: row;
+    column-gap:30px;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  .eventcard {
+  
+    padding: 8px;
+    padding-left: 0px;
+    position: relative;
+    width:100%;
+    /* width: 25%;
+    height: 25%; */
+    overflow: hidden;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    perspective: 100px; 
+  }
+  
+  .eventcard:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 20, 0.3);
+  }
+  
+  .eventcard.tilt {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  }
+  
+  .eventcard img {
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .eventcard .cardtitle {
+    background-color: rgb(0 0 20);
+    color: #f4f4f4;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid rgb(254 57 137);
+  }
+  
+ 
+  .eventstext {
+   padding-right: 30px;
+    position: relative;
+    width: 25%;
+    height: 60%;
+    overflow: hidden;
+    margin-left: 0px;
+    
+  }
+  .evebtn{
+    min-width:none;
+  }
+  
+  .eventstext h2 {
+    font-family: 'Game_Type', sans-serif;
+    text-align: left;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    color:#FFEBD3;
+    padding-bottom: 9px;
+  }
+  
+.eventcrd{
+  margin-left: 40px;
+}
+
+  .eventstext p {
+    font-family: 'Game_Type', sans-serif;
+    font-size: 1rem;
+    
+    color: rgba(255, 235, 211, 0.7);
+    margin: 20px 0;
+  }
+  
+  .eventsbutton {
+    /* background-color: rgb(254 57 137); */
+    color: #f4f4f4;
+    border: none;
+    padding: 10px 20px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+  
+  /* .events-button:hover {
+    background-color: rgb(254 57 137);
+  } */
+   .inst2 {
+    padding-left: 50%;
+  }
+  .high{
+    display: flex;
+    flex-direction: row;
+
+  }
+  .inst3 {
+    padding-left: 30%;
+    
+  }
+  .inst1{
+    padding-left:20%;
+  }
+  .highlight{
+    color:rgb(254 57 137);
+  }
+  .underline{
+    width: 57%;
+    height:30%;
+    margin-bottom: 10px;
+    
+  }
+
+  .inst2 span{
+
+    color:rgb(254 57 137);
+  }
+  .underline2{
+    width: 80%;
+    height:30%;
+    margin-bottom: 10px;
+    
+  }
+  .underline3{
+    width: 75%;
+    height:30%;
+    
+    
+  }
+  .arrow{
+    width:50px;
+    height:60px;
+  }
+  
+.eventstext p{
+  text-align: left;
+  margin-bottom:35px;
+}
+
+@media (min-width: 1150px) and (max-width: 1300px) {
+  
+
+  .rndtext1{
+    transform: translate(700px, -200px);
+  }
+  .rndtext2{
+    transform: translate(900px, -150px);
+  }
+  .rndtext3{
+    transform: translate(800px, -60px);
+  }
+   
+  .eventstext {
+    padding-right: 30px;
+     position: relative;
+     width: 28%;
+     height: 50%;
+     overflow: hidden;
+     margin-left: 0px;
+     
+   }
+   
+   .eventstext h2 {
+     font-family: 'Game_Type', sans-serif;
+     text-align: left;
+     padding-top: 5px;
+     font-size: 1.4rem;
+     color:#FFEBD3;
+     padding-bottom: 9px;
+   }
+ .eventstext p{
+  font-size:0.9rem;
+  margin-bottom: 10px;
+ }  
+ .eventsbutton {
+  margin-top: 0.5rem;
+}
+.eventsbutton {
+  background-color:none;
+  color: #f4f4f4;
+  border: none;
+  padding: 0px 0px;
+ margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+}
+
+@media (min-width: 1050px) and (max-width: 1150px) {
+
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(550px, -200px);
+  }
+  .rndtext2{
+    transform: translate(750px, -150px);
+  }
+  .rndtext3{
+    transform: translate(600px, -60px);
+  }
+.eventstext p{
+  font-size: 0.8rem;
+  
+  margin-top: 10px;
+  margin-bottom:0px;
+
+}
+.eventstext h2{
+  font-size: 22px;
+}
+.eventstext {
+  padding-right: 30px;
+   position: relative;
+   width: 28%;
+   height: 50%;
+   overflow: hidden;
+   margin-left: 0px;
+   
+ }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1050px) {
+.headersection .intro h1{
+  font-size:2.5rem;
+}
+
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(550px, -200px);
+  }
+  .rndtext2{
+    transform: translate(750px, -150px);
+  }
+  .rndtext3{
+    transform: translate(600px, -60px);
+  }
+.eventstext p{
+  font-size: 0.65rem;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.eventstext h2{
+  font-size: 18px;
+}
+.eventstext {
+  padding-right: 30px;
+   position: relative;
+   width: 30%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 0px;
+   
+ }
+ .cardssection{
+  column-gap: 20px;
+ }
+}
+
+
+@media (min-width: 920px) and (max-width: 1000px) {
+
+  .headersection .intro h1{
+    font-size:2.5rem;
+  }
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst2 {
+  padding-left: 45%;
+}
+.inst3 {
+  padding-left: 18%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(550px, -200px);
+  }
+  .rndtext2{
+    transform: translate(750px, -150px);
+  }
+  .rndtext3{
+    transform: translate(600px, -60px);
+  }
+.eventstext p{
+  font-size: 0.65rem;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.eventstext h2{
+  font-size: 18px;
+}
+.eventstext {
+  padding-right: 30px;
+   position: relative;
+   width: 30%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 0px;
+   
+ }
+ .cardssection{
+  column-gap: 20px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+}
+
+
+@media (min-width: 800px) and (max-width: 920px) {
+
+  .headersection .intro h1{
+    font-size:2.5rem;
+  }
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst2 {
+  padding-left: 45%;
+}
+.inst3 {
+  padding-left: 18%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(400px, -200px);
+  }
+  .rndtext2{
+    transform: translate(600px, -150px);
+  }
+  .rndtext3{
+    transform: translate(500px, -70px);
+  }
+.eventstext p{
+  font-size: 0.65rem;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.eventstext h2 {
+  font-family: 'Game_Type', sans-serif;
+  text-align: left;
+  padding-top: 4px;
+  font-size: 1.15rem;
+  color: #FFEBD3;
+  padding-bottom: 6px;
+}
+.cardssection {
+  
+  column-gap: 10px;
+}
+.eventstext {
+  /* padding-right: 20px; */
+  position: relative;
+  width: 35%;
+  height: 45%;
+  overflow: hidden;
+  margin-left: 0px;
+}
+ .randomtext {
+  position: absolute;
+  font-size: 0.6rem;
+  color: #FFEBD3;
+}
+ .cardssection{
+  column-gap: 20px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+}
+
+
+@media (min-width: 700px) and (max-width: 800px) {
+
+  .headersection .intro h1{
+    font-size:2rem;
+  }
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+
+.inst2 {
+  padding-left: 45%;
+}
+.inst3 {
+  padding-left: 18%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(400px, -200px);
+  }
+  .rndtext2{
+    transform: translate(550px, -130px);
+  }
+  .rndtext3{
+    transform: translate(480px, -50px);
+  }
+.eventstext p{
+  font-size: 0.65rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+/* .events-text h2{
+  font-size: 15px;
+} */
+.eventstext {
+  padding-right: 12px;
+   position: relative;
+   width: 35%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 0px;
+   
+ }
+
+ .eventcrd {
+  margin-left: 15px;
+}
+ .cardssection{
+  column-gap: 20px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+}
+
+@media (min-width:630px) and (max-width:700px){
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+  
+  .headersection .intro h1{
+    font-size:2rem;
+  }
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst2 {
+  padding-left: 45%;
+}
+.inst3 {
+  padding-left: 18%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(300px, -200px);
+  }
+  .rndtext2{
+    transform: translate(450px, -130px);
+  }
+  .rndtext3{
+    transform: translate(400px, -50px);
+  }
+.eventstext p{
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.usual{
+  display:none;
+}
+.resp{
+  display:flex;
+}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.7rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+
+.eventcontainer{
+  margin-left: 50px;
+}
+.eventstext {
+ 
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 50px;
+
+ }
+ .concerts{
+  padding-left: 20px;
+ }
+ .eventcrd {
+  margin-left: 15px;
+}
+ .cardssection{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 50px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 40px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+.concerts {
+  padding-left: 10px;
+}
+.usual{
+  display:none;
+}
+}
+
+
+
+@media (min-width:540px) and (max-width:630px){
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+  
+  .headersection .intro h1{
+    font-size:2rem;
+  }
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst2 {
+  padding-left: 45%;
+}
+.inst3 {
+  padding-left: 18%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(300px, -170px);
+  }
+  .rndtext2{
+    transform: translate(380px, -100px);
+  }
+  .rndtext3{
+    transform: translate(300px, -40px);
+  }
+.eventstext p{
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.eventstext h2{
+margin: 0px;
+}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.7rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+.eventcontainer{
+  margin-left: 30px;
+}
+.eventstext {
+  
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 50px;
+
+ }
+ 
+.usual{
+  display: none;
+}
+.resp{
+  display:flex;
+}
+ .eventcrd {
+  margin-left: 0px;
+}
+ .cardssection{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 50px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 40px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.randomtext {
+  position: absolute;
+  font-size: 0.55rem;
+  color: #FFEBD3;
+}
+.headersection .intro h1 {
+  font-size: 1.5rem;
+}
+.arrow {
+  width: 30px;
+  height: 30px;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+
+}
+
+@media (min-width:480px) and (max-width:540px){
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+  
+  .headersection .intro h1{
+    font-size:2rem;
+  }
+  .usual{
+    display: none;
+  }
+  .resp{
+    display:flex;
+  }
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst2 {
+  padding-left: 45%;
+}
+.inst3 {
+  padding-left: 18%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    transform: translate(300px, -170px);
+  }
+  .rndtext2{
+    transform: translate(380px, -100px);
+  }
+  .rndtext3{
+    transform: translate(300px, -40px);
+  }
+.eventstext p{
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.eventstext h2{
+margin: 0px;
+font-size: 1.3rem;
+}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.5rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+
+.eventstext {
+ 
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 50px;
+
+ }
+
+ .eventcrd {
+  margin-left: 0px;
+}
+ .cardssection{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 30px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 40px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.randomtext {
+  position: absolute;
+  font-size: 0.55rem;
+  color: #FFEBD3;
+}
+.headersection .intro h1 {
+  font-size: 1.5rem;
+}
+.arrow {
+  width: 30px;
+  height: 30px;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+.br{display:none;}
+
+}
+
+
+
+@media (min-width:430px) and (max-width:480px){
+  .headersection {
+    width: 90%;
+}
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+  
+  .headersection .intro h1{
+    font-size:2.3rem;
+  }
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst1 {
+  padding-left: 15%;
+}
+.inst2 {
+  padding-left: 30%;
+}
+.inst3 {
+  padding-left: 10%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    display:none;
+  }
+  .rndtext2{
+    display:none;
+  }
+  .rndtext3{
+    display:none;
+  }
+.eventstext p{
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.eventstext h2{
+margin: 0px;
+font-size: 1.5rem;
+}
+.usual{
+  display: none;
+}
+.resp{
+  display:flex;
+}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.4rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+
+.eventstext {
+ 
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 30px;
+
+ }
+
+ .eventcrd {
+  margin-left: 0px;
+}
+ .cardssection{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 30px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 30px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.randomtext {
+  position: absolute;
+  font-size: 0.55rem;
+  color: #FFEBD3;
+}
+.headersection .intro h1 {
+  font-size: 2.3rem;
+}
+.arrow {
+  width: 50px;
+  height: 50px;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+}
+
+
+
+@media (min-width:390px) and (max-width:430px){
+  .headersection {
+    width: 90%;
+}
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+ 
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst1 {
+  padding-left: 15%;
+}
+.inst2 {
+  padding-left: 30%;
+}
+.inst3 {
+  padding-left: 10%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    display:none;
+  }
+  .rndtext2{
+    display:none;
+  }
+  .rndtext3{
+    display:none;
+  }
+.eventstext p{
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.eventstext h2{
+margin: 0px;
+font-size: 1.4rem;
+}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.4rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+.usual{
+  display: none;
+}
+.resp{
+  display:flex;
+}
+.eventstext {
+ 
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 30px;
+
+ }
+
+ .eventcrd {
+  margin-left: 0px;
+}
+ .cards-section{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 30px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 20px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.random-text {
+  position: absolute;
+  font-size: 0.55rem;
+  color: #FFEBD3;
+}
+.headersection .intro h1 {
+  font-size: 2.1rem;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+}
+
+
+
+@media (min-width:350px) and (max-width:390px){
+  .headersection {
+    width: 90%;
+}
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+ 
+  .arrow {
+    width: 30px;
+    height: 30px;
+}
+.inst1 {
+  padding-left: 15%;
+}
+.inst2 {
+  padding-left: 30%;
+}
+.inst3 {
+  padding-left: 10%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    display:none;
+  }
+  .rndtext2{
+    display:none;
+  }
+  .rndtext3{
+    display:none;
+  }
+.eventstext p{
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.eventstext h2{
+margin: 0px;
+font-size: 1.3rem;
+}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.3rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+.usual{
+  display: none;
+}
+.resp{
+  display:flex;
+}
+.eventstext {
+ 
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 30px;
+
+ }
+
+ .eventcrd {
+  margin-left: 0px;
+}
+ .cardssection{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 30px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 20px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.random-text {
+  position: absolute;
+  font-size: 0.55rem;
+  color: #FFEBD3;
+}
+.headersection .intro h1 {
+  font-size: 1.8rem;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+
+}
+
+@media (min-width:290px) and (max-width:350px){
+  .headersection {
+    width: 90%;
+}
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+ 
+  .arrow {
+    width: 30px;
+    height: 30px;
+}
+.inst1 {
+  padding-left: 15%;
+}
+.inst2 {
+  padding-left: 30%;
+}
+.inst3 {
+  padding-left: 10%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    display:none;
+  }
+  .rndtext2{
+    display:none;
+  }
+  .rndtext3{
+    display:none;
+  }
+.eventstext p{
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.eventstext h2{
+margin: 0px;
+font-size: 1.2rem;
+}
+.usual{display: none;}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.3rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+.usual{
+  display: hidden;
+}
+.resp{
+  display:flex;
+}
+
+.eventstext {
+ 
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 30px;
+
+ }
+
+ .eventcrd {
+  margin-left: 0px;
+}
+ .cardssection{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 30px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 10px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.randomtext {
+  position: absolute;
+  font-size: 0.55rem;
+  color: #FFEBD3;
+}
+.headersection .intro h1 {
+  font-size: 1.4rem;
+}
+.arrow {
+  width: 30px;
+  height: 30px;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+
+}
+
+
+
+
+
+@media (max-width:290px){
+  .headersection {
+    width: 90%;
+}
+  .cardssection{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+  }
+ 
+  .arrow {
+    width: 40px;
+    height: 50px;
+}
+.inst1 {
+  padding-left: 15%;
+}
+.inst2 {
+  padding-left: 30%;
+}
+.inst3 {
+  padding-left: 10%;
+}
+  .eventsbutton {
+    background-color:none;
+    color: #f4f4f4;
+    border: none;
+    padding: 0px 0px;
+   margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .rndtext1{
+    display:none;
+  }
+  .rndtext2{
+    display:none;
+  }
+  .rndtext3{
+    display:none;
+  }
+.eventstext p{
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.eventstext h2{
+margin: 0px;
+font-size: 1.2rem;
+}
+.usual{display: none;}
+.eventstext .resp span{
+  
+  display: flex
+;
+font-size: 1.3rem;
+    flex-direction: row;
+    column-gap: 2px;
+}
+.usual{
+  display: hidden;
+}
+.resp{
+  display:flex;
+}
+
+.eventstext {
+ 
+   position: relative;
+   width: 90%;
+   height: 45%;
+   overflow: hidden;
+   margin-left: 30px;
+
+ }
+
+ .eventcrd {
+  margin-left: 0px;
+}
+ .cardssection{
+  column-gap: 40px;
+ }
+ .underline {
+  width: 67%;
+  height: 30%;}
+  .underline1 {
+    width: 82%;
+    height: 30%;}
+    .underline2 {
+      width: 77%;
+      height: 30%;}
+
+.eventcard{
+  display:flex;
+  flex-direction: row;
+}
+.eventcontainer{
+  margin-left: 30px;
+  width:100%;
+}
+.evcard{
+  width:90%;
+  margin-left: 10px;
+}
+.eventtext{
+ justify-content: flex-end;
+}
+.randomtext {
+  position: absolute;
+  font-size: 0.55rem;
+  color: #FFEBD3;
+}
+.headersection .intro h1 {
+  font-size: 1.6rem;
+}
+.arrow {
+  width: 30px;
+  height: 30px;
+}
+.evText{
+  display:flex;
+  flex-direction: column-reverse;
+ 
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
