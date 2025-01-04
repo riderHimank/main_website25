@@ -1,5 +1,5 @@
-
-import "./sponsor.css";
+"use client"
+import styles from "./sponsor.module.css";
 import img1 from "./_components/img1.png";
 import img2 from "./_components/img2.png";
 import img3 from "./_components/img3.png";
@@ -12,7 +12,6 @@ import img9 from "./_components/img9.png";
 import img10 from "./_components/img10.png";
 import img11 from "./_components/img11.png";
 import img12 from "./_components/img12.png";
-// import line1 from "./_components/line1.png";
 import line2 from "./_components/line2.png";
 
 import dash1 from "./_components/dash1.png";
@@ -37,20 +36,20 @@ const sponsors = [
 
 const SponsorSection = () => {
   return (
-    <div className="sponsor-section">
-<Image src={dash1} alt=""/>
-      <h2 className="sponsor-title">Sponsors</h2>
-      <div className="sponsor-logos">
-      <Image src={line2} className="lines"/>
+    <div className={styles.sponsorsection}>
+<Image src={dash1} alt="" className={styles.dash}/>
+      <h2 className={styles.sponsortitle}>Sponsors</h2>
+      <div className={styles.sponsorlogos}>
+      <Image src={line2} className={styles.lines}/>
         {sponsors.map((sponsor, index) => (
           
-          <div className="sponsor-logo" key={index}>
-            <Image src={sponsor.logo} alt={sponsor.alt} id="sponsor-img"/>
+          <div className={styles.sponsorlogo} key={index}>
+            <Image src={sponsor.logo} alt={sponsor.alt} className={styles.sponsorImg}/>
           </div>
         ))}
-       <Image src={line2} className="lines" alt=""/>
+       <Image src={line2} className={styles.lines} alt=""/>
       </div>
-      <Image src={dash2} alt=""/>
+      <Image src={dash2} alt="" className={styles.dash}/>
     </div>
   );
 };
