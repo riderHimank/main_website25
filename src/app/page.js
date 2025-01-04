@@ -7,9 +7,10 @@ import SponsorSection from "./_sponsor-section/SponsorSec";
 export default function Page() {
   return (
     <div>
-      <CloudSection/>
+        <CloudSection/>
       <SponsorSection/>
       <EventSec/>
+      <Merch />
       <AlcherApp />
     </div>
   );
