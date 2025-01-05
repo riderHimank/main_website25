@@ -1,6 +1,6 @@
 
 "use client"
-import './Merch.css'
+import './merch.css'
 import Image from 'next/image'
 import { useEffect } from 'react'
 
