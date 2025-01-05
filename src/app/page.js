@@ -1,4 +1,4 @@
-import CloudSection from "./components/Cloudsection";
+import CloudSection from "./competitions/components/Cloudsection";
 import AlcherApp from "./_alcher-app-section/AlcherApp";
 import Merch from "./_merch-section/Merch";
 import EventSec from "./_events-section/EventSec";
