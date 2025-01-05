@@ -1,0 +1,73 @@
+
+
+@font-face {
+  font-family: 'Brick_Pixel';
+  src: url('./_components/Brick_Pixel.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.sponsorsection {
+  width:100%;
+    background-color: rgb(0 0 20);
+    text-align: center;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+    overflow-x: hidden;
+  }
+  .sponsorlogos .lines{
+/*   
+ width:100vw; */
+  }
+
+
+  .sponsortitle {
+    font-size: 3rem;
+    color:  rgb(254 57 137);
+    margin-bottom: 20px;
+    font-weight:400;
+    font-family: 'Brick_Pixel', sans-serif;
+  }
+  .dash{
+
+ width:100%;
+  }
+  
+  .sponsorlogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width:80vw;
+    margin:100px;
+    align-items: center;
+  }
+  
+  .sponsorlogo {
+   
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    transition: transform 0.1-s ease;
+  }
+  
+  .sponsorlogo img:hover {
+    transform: scale(1.1);
+  }
+
+  .sponsorImg{
+   height:100%;
+   width:100%;
+
+  }
+  @media (max-width:700px){
+    .sponsorlogos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      width:80vw;
+      margin:30px;
+      align-items: center;
+    }
+    
+  }

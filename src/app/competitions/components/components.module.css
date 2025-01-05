@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "gameTape";
+  src: url("/Game_Tape.ttf") format("truetype");
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}
+
+@font-face {
+  font-family: "stoneSlab";
+  src: url("/Stone_Slab.ttf") format("truetype");
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}
+
+.header {
+  font-family: gameTape;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 150px;
+}
+.title {
+  text-align: center;
+  text-shadow: 0 0 5px rgba(254, 57, 137, 1), 0 10px 30px rgba(254, 57, 137, 1),
+    0 10px 50px rgba(254, 57, 137, 1);
+  font-size: 8rem;
+  color: rgba(254, 57, 137, 1);
+}
+
+.content {
+  color: #ffebd3;
+  opacity: 60%;
+  font-family: stoneSlab;
+  padding: 0px 5% 0px 5%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.oneline {
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  font-size: 20px;
+  color: #ffebd3;
+}
+
+
+@media(max-width: 1000px){
+  .title{
+    font-size: 5rem;
+  }
+  .oneline{
+    font-size: 15px;
+  }
+  .content{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 510px){
+  .title{
+    font-size: 3rem;
+  }
+  .oneline{
+    font-size: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .content{
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width: 440px) {
+  .content{
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
