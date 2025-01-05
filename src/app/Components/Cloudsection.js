@@ -1,10 +1,24 @@
+'use client'
+
 import Image from "next/image";
 import SlotCounter from 'react-slot-counter';
-const CloudSection = () => {
-    return (
-        <section >
+import { useEffect, useState } from "react";
 
-            <div >
+const CloudSection = () => {
+    const [event_stat, setEventStat] = useState(0);
+    const [footfall_stat, setFootfallStat] = useState(0);
+    const [competition_stat, setCompetitionStat] = useState(0);
+
+    useEffect(() => {
+        setEventStat(45);
+        setFootfallStat(45);
+        setCompetitionStat(45);
+        // return () => clearTimeout(timer);
+    }, []);
+
+    return (
+        <section>
+            <div>
                 <Image
                     src="/redlines.png"
                     alt="redlines"
@@ -15,21 +29,20 @@ const CloudSection = () => {
             </div>
 
             <section className="clouds">
-
                 <div>
                     <Image
                         src="/cloud1u.png"
                         alt="cloud"
                         width={100}
                         height={100}
-                        className="fu cloud "
+                        className="fu cloud"
                     />
                     <Image
                         src="/cloud1b.png"
                         alt="cloud"
                         width={100}
                         height={100}
-                        className="fb cloud "
+                        className="fb cloud"
                     />
                 </div>
                 <div>
@@ -38,14 +51,14 @@ const CloudSection = () => {
                         alt="cloud"
                         width={100}
                         height={100}
-                        className="su cloud "
+                        className="su cloud"
                     />
                     <Image
                         src="/cloud2d.png"
                         alt="cloud"
                         width={100}
                         height={100}
-                        className="sd cloud "
+                        className="sd cloud"
                     />
                 </div>
                 <div>
@@ -54,33 +67,30 @@ const CloudSection = () => {
                         alt="cloud"
                         width={100}
                         height={100}
-                        className="tu  cloud "
+                        className="tu cloud"
                     />
-
                 </div>
                 <div>
-
                     <Image
                         src="/cloudlu.png"
                         alt="cloud"
                         width={100}
                         height={100}
-                        className="lu cloud "
+                        className="lu cloud"
                     />
                     <Image
                         src="/cloudlb.png"
                         alt="cloud"
                         width={100}
                         height={100}
-                        className="lb cloud "
+                        className="lb cloud"
                     />
                 </div>
-
             </section>
             <div className="logo">
                 <Image
                     src="/alcherlogo 1.svg"
-                    alt="alcher "
+                    alt="alcher"
                     width={100}
                     height={100}
                     className="alcherlogo"
@@ -108,7 +118,7 @@ const CloudSection = () => {
                         <div className="stats-flex">
                             <div className="stat-item">
                                 <h2 className="stat-title">   <SlotCounter
-                                    startValue={0}
+                                    startValue={event_stat}
                                     value={100}
                                     duration={1} 
                                     speed={1.4}
@@ -119,7 +129,7 @@ const CloudSection = () => {
                             </div>
                             <div className="stat-item">
                                 <h2 className="stat-title"> <SlotCounter
-                                    startValue={0}
+                                    startValue={footfall_stat}
                                     value={140}
                                     duration={1}
                                     speed={1.2}
@@ -130,12 +140,13 @@ const CloudSection = () => {
                             </div>
                             <div className="stat-item">
                                 <h2 className="stat-title"> <SlotCounter
-                                    startValue={0}
+                                    startValue={competition_stat}
                                     value={45}
                                     duration={1}
                                     speed={1.4}
                                     sequentialAnimationMode
                                     animateOnVisible={{ triggerOnce: false, rootMargin: '0px 0px -50px 0px' }}
+
                                 />+</h2>
                                 <p className="stat-description">Competitions</p>
                             </div>

@@ -29,20 +29,25 @@
     height: 100vh;
 }
 .phone{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     position: absolute;
+    padding-left: 1%;
+    padding-top: 7%;
     z-index: 9;
-    margin-top: 4%;
-    margin-right: 1.7%;
+    /* margin-top: 4%;
+    margin-right: 1.7%; */
 }
+
 .text{
+    width: 93%;
+    /* justify-self: center; */
     position: absolute; 
-    z-index: 4;   
-    top:47%;
-    left: 49%;
-    transform: translate(-50%, -50%);
+     z-index: 4;   
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 
 .get-app-btn{
@@ -84,44 +89,32 @@
  */
 
 
-@media screen  and (max-width:1216px){
-    .text{
-        scale: 0.8;
-        left: 40%;
-        top: 40%;
-    }
+@media screen  and (max-width:1300px){
+  
     .phone{
-        scale: 0.8;
-        left: 37%;
-        top: 20%;
+        scale: 0.7;
+        /* left: 37%;
+        top: 20%; */
     }
 }
 
 
 @media screen  and (max-width:1024px){
-    .text{
-        scale: 0.7;
-        left: 30%;
-        top: 35%;
-    }
+   
     .phone{
         scale: 0.7;
-        left: 33.5%;
+        left: 35%;
         top: 17%;
     }
 }
 
 @media screen  and (max-width:900px){
-    .text{
+   
+    .phone {
         scale: 0.6;
-        left: 20%;
-        top: 32%;
-    }
-    .phone{
-        scale: 0.6;
-        left: 31%;
+        left: 32%;
         /* position: fixed; */
-        top: 17%;
+        top: 19%;
     }
     .get-app-btn{
         scale: 0.8;
@@ -130,16 +123,12 @@
     }
 }
 @media screen  and (max-width:804px){
-    .text{
+  
+    .phone {
         scale: 0.55;
-        left: 13%;
-        top: 32%;
-    }
-    .phone{
-        scale: 0.55;
-        left: 29%;
+        left: 30%;
         /* position: fixed; */
-        top: 18%;
+        top: 19%;
     }
     .get-app-btn{
         scale: 0.8;
@@ -148,14 +137,10 @@
     }
 }
 @media screen  and (max-width:744px){
-    .text{
+   
+    .phone {
         scale: 0.5;
-        left: 8%;
-        top: 32%;
-    }
-    .phone{
-        scale: 0.5;
-        left: 30%;
+        left: 29%;
         /* position: fixed; */
         top: 19%;
     }
@@ -167,14 +152,10 @@
 }
 
 @media screen  and (max-width:700px){
-    .text{
+    
+    .phone {
         scale: 0.5;
-        left: 4%;
-        top: 32%;
-    }
-    .phone{
-        scale: 0.5;
-        left: 26%;
+        left: 28%;
         /* position: fixed; */
         top: 20%;
     }
@@ -244,10 +225,15 @@
 }
 
 @media screen and (max-width:559px){
-    .phone{
-        /* left:10%; */
+    .phone {
+        left: 14%;
         justify-self: center;
-
+        /* display: none; */
+        /* margin-left: 20px; */
+    }
+ 
+    *{
+        overflow-x: hidden;
     }
 }
 
