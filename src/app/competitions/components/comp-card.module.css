@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "gameTape";
+    src: url("/Game_Tape.ttf") format("truetype");
+    font-weight: normal; /* Adjust if needed */
+    font-style: normal; /* Adjust if needed */
+}
+  
+@font-face {
+    font-family: "stoneSlab";
+    src: url("/Stone_Slab.ttf") format("truetype");
+    font-weight: normal; /* Adjust if needed */
+    font-style: normal; /* Adjust if needed */
+}
+
+
+.compCard{
+    margin-left: 1vw;
+    margin-top: 1vw;
+    font-family: gameTape;
+    width: 30vw;
+    padding-bottom: 1vw;
+}
+
+.cardImg{
+    height: 20vw;
+   
+    background-size: cover;
+}
+
+.compTitle{
+    font-size: 2vw;
+    margin-top: 2vw;
+    color: #FFEBD3;
+}
+
+.compDetails{
+    display: flex;
+    gap: 2vw;
+    font-size:1.5vw ;
+    color: #DE4784;
+}
+
+.compVanueTime{
+    display: flex;
+    gap: 4vw;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 1vw;
+    margin-top: .4vw;
+    border-top: .01rem solid darkgray;
+}
+
+
+.compVanue{
+   
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+   
+    color: #FFEBD3;
+    font-size: 1.5vw;
+}
+.compVanue p{
+    opacity: .5;
+}
+.locIconComp{
+    background-size: cover;
+    opacity: 1;
+}
+
+.locIconComp img{
+    width: 1.5vw;
+}
+
+
+.timeIconComp img{
+    width: 2.3vw;
+    margin-top: .5vw;
+}
+.compTime{
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+    color: #FFEBD3;
+    font-size: 1.5vw;
+}
+
+.compTime p{
+    opacity: .5;
+}
+
+.cardBtns{
+    color: #FFEBD3;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+}
+
+.registerBtnComp{
+    padding-bottom: .1vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    width: fit-content;
+    border-bottom: .1rem solid white;;
+}
+.mapCompIcon img{
+    width: 2vw;
+}
+
+.compet{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 400px){
+    .compet{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
