@@ -18,7 +18,7 @@
   height: 35vh;
   justify-content: space-between;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 1s ease;
   align-self: center;
 }
 .left.visible{
@@ -65,7 +65,7 @@
   height: 0rem; 
   overflow:hidden;  
   background-color: white;
-  transition: width 1.5s ease, height 1.5s ease;
+  transition: width 1s ease, height 1s ease;
   /* object-fit: contain; */
   background-image: url('./_Components/Frame97.png');
   background-size: 45vw 35vw;
@@ -141,12 +141,15 @@
   font-family: "gameTape";
   padding-top: 5px;
   margin-bottom: -25vh;
-  transition: margin-bottom 1.5s ease;
+  transition: margin-bottom 1s ease;
   color: #FFEBD3B2;
   line-height: 4.5vh;
 
 }
-
+.eventName{
+  font-family: "gameTape";
+  font-size: 1vw;
+}
 .right p {
   /* height: 5.5vh; */
   font-size: 1.3vw;

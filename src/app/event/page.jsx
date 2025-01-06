@@ -4,35 +4,60 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./events.module.css";
 
-import image1 from "./_Components/image1.jpeg"
-import image2 from "./_Components/image2.png"
-import enter from "./_Components/Group38.png"
-import next from "./_Components/next.png"
+import image1 from "./_Components/image1.jpeg";
+import image2 from "./_Components/image2.png";
+import image3 from "./_Components/next.png";
+import image4 from "./_Components/Group38.png";
+import image5 from "./_Components/image1.jpeg";
+
+import enter from "./_Components/Group38.png";
+import next from "./_Components/next.png";
+
+const images = [
+  { src: image1, name: "Pronites" },
+  { src: image2, name: "Proshows" },
+  { src: image3, name: "Creator's Camp" },
+  { src: image4, name: "Critical Damage" },
+  { src: image5, name: "Flickeringa" },
+];
 
 export default function Page() {
-  const [currentImage, setCurrentImage] = useState(image1);
-  const assignImage = (image) => {
-    setCurrentImage(image);
-    console.log("Current Image Updated:", image);
-  };
-
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(true);
 
+  const assignImage = (index) => {
+    setCurrentIndex(index);
+  };
+
   const handleExpand = () => setIsExpanded(true);
-  const handleReset = () => setIsExpanded(false);
+
+  const handleNext = () => {
+    // Step 1: Perform refresh
+    setIsExpanded(false); // Collapse the component briefly
+    setTimeout(() => {
+      setIsExpanded(true); // Re-expand the component after refresh
+
+      // Step 2: Assign the next image
+      const nextIndex = (currentIndex + 1) % images.length;
+      assignImage(nextIndex);
+
+      // Step 3: Execute the Click Me function
+      handleExpand();
+    }, 900); // Timeout ensures the "refresh" effect is noticeable
+  };
 
   return (
     <main>
       <div className={styles.mainPage}>
         <div className={`${styles.left} ${isExpanded ? styles.visible : ""}`}>
           <h1 className={styles.heading}>PRONITES</h1>
-          <div className={styles.description} >
+          <div className={styles.description}>
             <p className={styles.descriptionTxt}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              expedita esse autem in consequuntur? Repudiandae earum dignissimos voluptate tempora! 
+              expedita esse autem in consequuntur? Repudiandae earum dignissimos voluptate tempora!
             </p>
           </div>
-          
+
           <button className={styles.enter}>
             <Image
               src={enter}
@@ -49,7 +74,7 @@ export default function Page() {
             }`}
           >
             <Image
-              src={currentImage}
+              src={images[currentIndex].src}
               className={styles.image1}
               alt="show's image"
               quality={100}
@@ -57,69 +82,39 @@ export default function Page() {
               height={500}
             />
           </div>
-          
         </div>
-        <div className={`${styles.box1} ${isExpanded? styles.box1Visible : ""}`}>
-        <div className={styles.nextButton}>
-            <Image
-              src={next}
-              className=""
-            />
-            <p className={styles.eventName}>Pronite</p>
+        <div className={`${styles.box1} ${isExpanded ? styles.box1Visible : ""}`}>
+          <div className={styles.nextButton} onClick={handleNext}>
+            <Image src={next} className="" alt="next button" />
+            <p className={styles.eventName}>{images[currentIndex].name}</p>
           </div>
-        <div className={`${styles.right} ${isExpanded? styles.up : ""}`}>
-          
-        <p>Day 0 : Saaz</p>
-          <hr />
-          <p>Day 0 : Juggernaut</p>
-          <hr />
-          <p>Day 0 : Saaz</p>
-          <hr />
-          <p>Day 0 : Saaz</p>
-          <hr />
-        </div>
+          <div className={`${styles.right} ${isExpanded ? styles.up : ""}`}>
+            <p>Day 0 : Saaz</p>
+            <hr />
+            <p>Day 0 : Juggernaut</p>
+            <hr />
+            <p>Day 0 : Saaz</p>
+            <hr />
+            <p>Day 0 : Saaz</p>
+            <hr />
+          </div>
         </div>
       </div>
       <footer className={styles.footer}>
-      <div className={styles.imagelinks}>
-        <button
-          className={`${styles.link} ${styles.i1} ${styles.selected}`}
-          onClick={() => assignImage(image1)}
-        >
-          <p className={styles.txt}>Pronites</p>
-        </button>
-        <button
-          className={`${styles.link} ${styles.i2}`}
-          onClick={() => assignImage(image2)}
-        >
-          <p className={styles.txt}>Proshows</p>
-        </button>
-        <button
-          className={`${styles.link} ${styles.i3}`}
-          onClick={() => assignImage(image3)}
-        >
-          <p className={styles.txt}>Creator's Camp</p>
-        </button>
-        <button
-          className={`${styles.link} ${styles.i4}`}
-          onClick={() => assignImage(image4)}
-        >
-          <p className={styles.txt}>Critical Damage</p>
-        </button>
-        <button
-          className={`${styles.link} ${styles.i5}`}
-          onClick={() => assignImage(image5)}
-        >
-          <p className={styles.txt}>Flickeringa</p>
-        </button>
-      </div>
+        <div className={styles.imagelinks}>
+          {images.map((image, index) => (
+            <button
+              key={index}
+              className={`${styles.link} ${
+                currentIndex === index ? styles.selected : ""
+              }`}
+              onClick={() => assignImage(index)}
+            >
+              <p className={styles.txt}>{image.name}</p>
+            </button>
+          ))}
+        </div>
       </footer>
-      <button className={styles.check} onClick={handleExpand}>
-            Click Me
-          </button>
-          <button className={styles.check2} onClick={handleReset}>
-            Refresh
-          </button>
     </main>
   );
 }
