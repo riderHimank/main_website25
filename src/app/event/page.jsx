@@ -4,15 +4,19 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./events.module.css";
 
-import image1 from "./_Components/deval_pan_digi.jpeg"
+import image1 from "./_Components/image1.jpeg"
+import image2 from "./_Components/image2.png"
+import enter from "./_Components/Group38.png"
+import next from "./_Components/next.png"
 
 export default function Page() {
-  var image= 1;
-  const links= document.querySelectorAll('.link');
-  const assignImage = (clicked) => {
-    console.log(clicked);
+  const [currentImage, setCurrentImage] = useState(image1);
+  const assignImage = (image) => {
+    setCurrentImage(image);
+    console.log("Current Image Updated:", image);
   };
-  const [isExpanded, setIsExpanded] = useState(false);
+
+  const [isExpanded, setIsExpanded] = useState(true);
 
   const handleExpand = () => setIsExpanded(true);
   const handleReset = () => setIsExpanded(false);
@@ -22,12 +26,21 @@ export default function Page() {
       <div className={styles.mainPage}>
         <div className={`${styles.left} ${isExpanded ? styles.visible : ""}`}>
           <h1 className={styles.heading}>PRONITES</h1>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            expedita esse autem in consequuntur? Repudiandae earum dignissimos voluptate tempora! Similique tenetur
-            non laborum mollitia quos voluptatem nostrum eligendi fuga inventore.
-          </p>
-          <button className={styles.enter}>enter</button>
+          <div className={styles.description} >
+            <p className={styles.descriptionTxt}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              expedita esse autem in consequuntur? Repudiandae earum dignissimos voluptate tempora! 
+            </p>
+          </div>
+          
+          <button className={styles.enter}>
+            <Image
+              src={enter}
+              className="w-48 h-14"
+              quality={100}
+              alt="enter button"
+            />
+          </button>
         </div>
         <div className={styles.center}>
           <div
@@ -35,16 +48,8 @@ export default function Page() {
               isExpanded ? styles.mainImageExpanded : ""
             }`}
           >
-            {/* <Image
-              src={frame}
-              className={styles.frame}
-              alt="Frame"
-              quality={100}
-              width={500}
-              height={500}
-            /> */}
             <Image
-              src={image1}
+              src={currentImage}
               className={styles.image1}
               alt="show's image"
               quality={100}
@@ -56,49 +61,54 @@ export default function Page() {
         </div>
         <div className={`${styles.box1} ${isExpanded? styles.box1Visible : ""}`}>
         <div className={`${styles.right} ${isExpanded? styles.up : ""}`}>
-        <p>Day 0: Saaz</p>
+          <div className="next-button">
+            <Image
+              src={next}
+              className=""
+            />
+          </div>
+        <p>Day 0 : Saaz</p>
           <hr />
-          <p>Day 0: Saaz</p>
+          <p>Day 0 : Juggernaut</p>
           <hr />
-          <p>Day 0: Saaz</p>
+          <p>Day 0 : Saaz</p>
           <hr />
-          <p>Day 0: Saaz</p>
+          <p>Day 0 : Saaz</p>
           <hr />
         </div>
         </div>
       </div>
       <footer className={styles.footer}>
-      <div>
       <div className={styles.imagelinks}>
         <button
-          className={`${styles.link} ${styles.i1}`}
-          onClick={() => assignImage(styles.i1)}
+          className={`${styles.link} ${styles.i1} ${styles.selected}`}
+          onClick={() => assignImage(image1)}
         >
-          <p className={styles.txt}>Pronites1</p>
+          <p className={styles.txt}>Pronites</p>
         </button>
         <button
           className={`${styles.link} ${styles.i2}`}
-          onClick={() => assignImage(styles.i2)}
+          onClick={() => assignImage(image2)}
         >
-          <p className={styles.txt}>Pronites2</p>
+          <p className={styles.txt}>Proshows</p>
         </button>
         <button
           className={`${styles.link} ${styles.i3}`}
-          onClick={() => assignImage(styles.i3)}
+          onClick={() => assignImage(image3)}
         >
-          <p className={styles.txt}>Pronites3</p>
+          <p className={styles.txt}>Creator's Camp</p>
         </button>
         <button
           className={`${styles.link} ${styles.i4}`}
-          onClick={() => assignImage(styles.i4)}
+          onClick={() => assignImage(image4)}
         >
-          <p className={styles.txt}>Pronites4</p>
+          <p className={styles.txt}>Critical Damage</p>
         </button>
         <button
           className={`${styles.link} ${styles.i5}`}
-          onClick={() => assignImage(styles.i5)}
+          onClick={() => assignImage(image5)}
         >
-          <p className={styles.txt}>Pronites5</p>
+          <p className={styles.txt}>Flickeringa</p>
         </button>
       </div>
       </footer>
