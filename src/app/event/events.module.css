@@ -1,0 +1,150 @@
+.mainPage {
+  display: flex;
+  height: 65vh;
+  width: 90vw;
+  margin-left: 5vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+  height: 18rem;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  align-self: center;
+}
+.left.visible{
+  opacity: 1;
+}
+
+.heading {
+  font-size: 3rem;
+}
+
+.enter {
+  height: 3.5rem;
+  width: 16rem;
+  background-color: #f87171; 
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+}
+.mainImage {
+  position: relative;
+  width: 0rem; 
+  height: 0rem; 
+  overflow:hidden;  
+  background-color: white;
+  transition: width 1.5s ease, height 1.5s ease;
+  /* object-fit: contain; */
+  background-image: url('./_Components/Frame97.png');
+  background-size: 31rem 31rem;
+  background-repeat: no-repeat;
+}
+
+.mainImageExpanded {
+  width: 31rem; 
+  height: 31rem; 
+}
+.image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem; 
+  /* height: 35.2rem; */
+  
+  margin-top: 2.8rem;
+  margin-left: 0.5rem;
+  /* overflow: hidden; */
+  /* object-fit: contain; */
+}
+
+
+.check {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6; 
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.check2 {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #6b7280; 
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* .right {
+
+} */
+.box1 {
+  width: 170px;
+  height: 140px;
+  background-color: black;
+  overflow: hidden;
+  position: absolute;
+  margin-left: 53vw;
+  transition: margin left 1s ease;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+/* .box1Visible{
+  margin-left: 1rem;
+} */
+.right {
+  width: 170px;
+  height: 140px;
+  object-fit: contain;
+  padding: 0;
+  margin: 5px;
+  background-color: black;
+  color: whitesmoke;
+  padding-top: 5px;
+  margin-top: 140px;
+  transition: margin-top 1.5s ease;
+  
+}
+
+.right p {
+  margin: 5px;
+}
+
+.up {
+  margin-top: 0px; /* Slide the content up */
+}
+.footer{
+  height: 100px;
+  width: 80vw;
+  
+}
+.imagelinks{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10vw;
+}
+.link{
+  background-image: url('./_Components/FrameForLinks.png');
+  height: 5vh;
+  width: 12vw;
+  background-size: 12vw 5vh;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
