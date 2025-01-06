@@ -14,8 +14,10 @@ const SearchBar = () => {
   const handleSearch = (value) => {
     setInput(value);
     setSelectedCategory("");
-    const filtered = info.filter((item) =>
-      item.tags.toLowerCase().includes(value.toLowerCase())
+    const filtered = info.filter(
+      (item) =>
+        item.tags.toLowerCase().includes(value.toLowerCase()) ||
+        item.comp_name.toLowerCase().startsWith(value.toLowerCase())
     );
     setFilteredData(filtered);
   };

@@ -3,7 +3,6 @@ import React from "react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
-import "./components/stone-slab.css";
 import { usePathname } from "next/navigation";
 const Navbar = () => {
   const navOptions = [

@@ -1,9 +1,10 @@
 import Image from "next/image";
 import SlotCounter from "react-slot-counter";
 import styles from "./components.module.css";
+import "./cloudsection.css"
 const CloudSection = () => {
   return (
-    <section>
+    <section className="hero">
       <section className="clouds">
         <div>
           <Image

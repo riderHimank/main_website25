@@ -3,6 +3,7 @@
 import Image from "next/image";
 import SlotCounter from 'react-slot-counter';
 import { useEffect, useState } from "react";
+import "./cloudsection.css";
 
 const CloudSection = () => {
     const [event_stat, setEventStat] = useState(0);
@@ -13,17 +14,14 @@ const CloudSection = () => {
         setEventStat(45);
         setFootfallStat(45);
         setCompetitionStat(45);
-        // return () => clearTimeout(timer);
     }, []);
 
     return (
-        <section>
+        <section style={{width: "100%",height: "80vmin"}}>
             <div>
-                <Image
+                <img
                     src="/redlines.png"
                     alt="redlines"
-                    width={100}
-                    height={100}
                     className="redlines"
                 />
             </div>

@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "./footer.module.css";
-import "./components/stone-slab.css";
-import "./components/game-tape.css";
 const footer = () => {
   return (
     <div>
       <img className="w-full h-20 bg-gray-900 " src="/footUpBG.png" alt="" />
-      <div className={styles.mainFooter}>
+      <div className={styles.mainFooter}> 
         <div
           className={styles.eventsSec}
           style={{ fontFamily: "stoneSlab", color: "rgba(255, 235, 211, 1)" }}
