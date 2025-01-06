@@ -116,13 +116,15 @@
 } */
 .box1 {
   width: 13vw;
-  height: 25vh;
+  height: 65vh;
   background-color: black;
   overflow: hidden;
   position: absolute;
   margin-left: 63vw;
   transition: margin left 1s ease;
-  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 /* .box1Visible{
@@ -130,7 +132,7 @@
 } */
 .right {
   width: 13vw;
-  height: 20vh;
+  height: 25vh;
   object-fit: contain;
   padding: 0;
   margin: 5px;
@@ -138,8 +140,8 @@
   color: whitesmoke;
   font-family: "gameTape";
   padding-top: 5px;
-  /* margin-top: 100px; */
-  transition: margin-top 1.5s ease;
+  margin-bottom: -25vh;
+  transition: margin-bottom 1.5s ease;
   color: #FFEBD3B2;
   line-height: 4.5vh;
 
@@ -152,7 +154,7 @@
 }
 
 .up {
-  margin-top: 0px; /* Slide the content up */
+  margin-bottom: 0; /* Slide the content up */
 }
 .footer{
   height: 100px;

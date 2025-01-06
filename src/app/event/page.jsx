@@ -60,13 +60,15 @@ export default function Page() {
           
         </div>
         <div className={`${styles.box1} ${isExpanded? styles.box1Visible : ""}`}>
-        <div className={`${styles.right} ${isExpanded? styles.up : ""}`}>
-          <div className="next-button">
+        <div className={styles.nextButton}>
             <Image
               src={next}
               className=""
             />
+            <p className={styles.eventName}>Pronite</p>
           </div>
+        <div className={`${styles.right} ${isExpanded? styles.up : ""}`}>
+          
         <p>Day 0 : Saaz</p>
           <hr />
           <p>Day 0 : Juggernaut</p>
