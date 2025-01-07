@@ -1,21 +1,23 @@
 .mainPage {
   display: flex;
-  height: 65vh;
+  height: 38vw;
   width: 76vw;
   margin-left: 12vw;
   flex-wrap: nowrap;
   align-self: center;
   color: #FFEBD3;
-  
+  margin-top: 7vh;
 }
-
+.mobileview{
+  display: none;
+}
 .left {
   display: flex;
   flex-direction: column;
   width: 30vw;
   z-index: 5;
   overflow: visible;
-  height: 35vh;
+  height: 20.5vw;
   justify-content: space-between;
   opacity: 0;
   transition: opacity 1s ease;
@@ -50,7 +52,7 @@
 }
 .description{
   margin-top: -5vh;
-  max-width: 17vw;
+  width: 17vw;
 }
 .descriptionTxt{
   font-size: 1vw;
@@ -59,17 +61,22 @@
   font-weight: 400;
   color: #FFEBD3B2;
 }
+.enterImage{
+  width: 15vw;
+}
 .mainImage {
   position: relative;
-  width: 0rem; 
-  height: 0rem; 
+  width: 5vw; 
+  height: 2vw; 
   overflow:hidden;  
   background-color: white;
   transition: width 1s ease, height 1s ease;
   /* object-fit: contain; */
-  background-image: url('./_Components/Frame97.png');
+  background-image: url('./_Components/Frame973.png');
   background-size: 45vw 35vw;
   background-repeat: no-repeat;
+  filter: drop-shadow(0 0 60px #fe398871);
+  
 }
 
 .mainImageExpanded {
@@ -88,36 +95,10 @@
   /* overflow: hidden; */
   object-fit: cover;
 }
-
-
-.check {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #3b82f6; 
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.check2 {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #6b7280; 
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  margin-left: 1rem;
-  cursor: pointer;
-}
-
-/* .right {
-
-} */
 .box1 {
   width: 13vw;
-  height: 65vh;
-  background-color: black;
+  height: 35.5vw;
+  background-color: transparent;
   overflow: hidden;
   position: absolute;
   margin-left: 63vw;
@@ -125,35 +106,40 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 /* .box1Visible{
   margin-left: 1rem;
 } */
 .right {
   width: 13vw;
-  height: 25vh;
+  height: 14.6vw;
   object-fit: contain;
   padding: 0;
   margin: 5px;
-  background-color: black;
-  color: whitesmoke;
+  background-color: transparent;
+
   font-family: "gameTape";
   padding-top: 5px;
-  margin-bottom: -25vh;
+  margin-bottom: -14.6vw;
   transition: margin-bottom 1s ease;
   color: #FFEBD3B2;
-  line-height: 4.5vh;
-
+  line-height: 2.63vw;
+}
+.nextImage{
+  width: 5vw;
+  height: 4vw;
 }
 .eventName{
   font-family: "gameTape";
-  font-size: 1vw;
+  font-size: calc(1vw + 0.25rem);
+  color: #4BF89B;
+  text-decoration: underline;
 }
 .right p {
   /* height: 5.5vh; */
   font-size: 1.3vw;
-  margin: 5px;
+  margin: 0.3vw;
 }
 
 .up {
@@ -164,7 +150,7 @@
   width: 80vw;
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-top: 12vh;
+  margin-top: 2vh;
 }
 .imagelinks{
   display: flex;
@@ -196,4 +182,73 @@
 }
 .link.selected p{
   opacity: 100%;
+}
+@media(max-width:500px) {
+  .mainPage,.footer{display: none;}
+  
+  .mobileview{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin-left: 5vw;
+    height: 70vh;
+    align-items: center;
+    color: #FFEBD3;
+  }
+  .upper{
+    display: flex;
+    flex-direction: row;
+    height: 65vw;
+    width: 90vw;
+    flex-wrap: nowrap;
+  }
+  .upperLeft{
+    display: flex;
+    width: 35vw;
+    flex-direction: column;
+    z-index: 5;
+    justify-content: space-between;
+  }
+  .heading{
+    margin-top: 7vh;
+    font-size: 8.3vw;
+  }
+  .eventName{
+    font-size: calc(1.25vw + 0.35rem);
+  }
+  .center{
+    width: 65vw;
+    margin-left: -9.5vw;
+  }
+  .mainImage{
+    background-size: 65vw 63.1vw;
+    width: 8vw;
+    height: 4vw;
+  }
+  .mainImageExpanded{
+    width: 65vw;
+    height: 63.1vw;
+  }
+  .image1{
+    width: 62.1vw;
+    height: 55.9vw;
+    margin-top: 5.4vw;
+    margin-left: 1.45vw;
+  }
+  .description{
+    width: 80vw;
+    margin-top: 2vh;
+  }
+  .descriptionTxt{
+    align-self: center;
+    font-size: 2vw;
+  }
+  .lower{
+    margin-top: 2vh;
+  }
+  .enterImage,.enter{
+    width: calc(45vw + 2.5rem);
+    height: 38px;
+  }
 }
